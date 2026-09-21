@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Comet</title>
+<meta name="description" content="Privacy Policy for the Comet game (com.intergalactic.app) on Google Play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Figtree:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --space: #10112A;
+    --space-2: #181A3D;
+    --ink: #ECEBFA;
+    --muted: #A3A5C8;
+    --line: #2A2D5A;
+    --comet: #FFB547;
+    --comet-hot: #FF6F91;
+    --planet: #6C8CFF;
+    --display: "Unbounded", "Segoe UI", system-ui, sans-serif;
+    --body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 24px); background: var(--space); }
+  body {
+    margin: 0; color: var(--ink); background:
+      radial-gradient(1px 1px at 12% 18%, #fff8 50%, transparent 51%),
+      radial-gradient(1px 1px at 78% 9%, #fff6 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 44% 32%, #fff9 50%, transparent 51%),
+      radial-gradient(1px 1px at 91% 41%, #fff5 50%, transparent 51%),
+      radial-gradient(1px 1px at 23% 63%, #fff5 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 67% 71%, #fff7 50%, transparent 51%),
+      radial-gradient(1px 1px at 8% 88%, #fff5 50%, transparent 51%),
+      radial-gradient(1px 1px at 55% 94%, #fff4 50%, transparent 51%),
+      radial-gradient(ellipse at 80% -10%, #2B2470 0%, transparent 55%),
+      var(--space);
+    background-attachment: fixed;
+    font: 400 1.0625rem/1.7 var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--comet); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--comet); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Hero: the orbiting comet is the one bold moment */
+  header.hero { padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(2.5rem, 6vw, 4rem); }
+  .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+  @media (min-width: 820px) { .hero-grid { grid-template-columns: 1fr 17rem; } }
+  .game { font: 700 1rem/1 var(--display); color: var(--comet); margin: 0 0 1.25rem; }
+  .game span { color: var(--muted); font: 400 .9375rem/1 var(--body); margin-left: .5rem; }
+  h1 {
+    font: 800 clamp(2.4rem, 7vw, 4.5rem)/1 var(--display);
+    letter-spacing: -.03em; margin: 0 0 1.25rem;
+  }
+  .lede { font-size: 1.1875rem; color: var(--muted); max-width: 34rem; margin: 0; }
+  .dates { margin-top: 1.5rem; font-size: .9375rem; color: var(--muted); }
+  .dates b { color: var(--ink); font-weight: 600; }
+  .orbit { width: 100%; max-width: 17rem; justify-self: center; }
+  .orbit .spin { transform-origin: 140px 140px; animation: spin 7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .orbit .spin { animation: none; } html { scroll-behavior: auto; } }
+
+  .promise {
+    border: 1px solid var(--line); border-radius: 22px; background: color-mix(in srgb, var(--space-2) 85%, transparent);
+    padding: clamp(1.5rem, 4vw, 2.25rem); margin-bottom: 3.5rem;
+  }
+  .promise h2 { font: 700 1.25rem/1.3 var(--display); margin: 0 0 1.25rem; }
+  .promise ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem 2rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .promise li { padding-left: 1.75rem; position: relative; }
+  .promise li::before {
+    content: ""; position: absolute; left: 0; top: .55em; width: 12px; height: 12px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fff, var(--comet) 45%, var(--comet-hot));
+    box-shadow: 0 0 10px var(--comet);
+  }
+  .promise b { display: block; font-weight: 700; }
+  .promise span { color: var(--muted); font-size: .9688rem; }
+
+  main { padding-bottom: 4rem; }
+  article { max-width: 42rem; }
+  article section { padding: 2.25rem 0; border-top: 1px solid var(--line); }
+  article h2 { font: 700 1.375rem/1.3 var(--display); letter-spacing: -.01em; margin: 0 0 .9rem; }
+  article p, article ul { margin: 0 0 1rem; }
+  article ul { padding-left: 1.25rem; }
+  article li { margin-bottom: .4rem; }
+  article li::marker { color: var(--comet); }
+  .table-scroll { overflow-x: auto; margin: 1rem 0 1.25rem; border: 1px solid var(--line); border-radius: 16px; }
+  table { width: 100%; border-collapse: collapse; min-width: 30rem; font-size: .9688rem; }
+  th, td { text-align: left; padding: .8rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--space-2); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .contact { border: 1.5px solid var(--comet); border-radius: 18px; padding: 1.25rem 1.5rem; }
+  .contact p { margin: 0 0 .3rem; }
+
+  footer { border-top: 1px solid var(--line); padding: 2rem 0; color: var(--muted); font-size: .9375rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="game">Comet <span>com.intergalactic.app</span></p>
+      <h1>Privacy Policy</h1>
+      <p class="lede">Comet is a one-tap game about catching orbits, not collecting data. Here is exactly what the game stores and why.</p>
+      <p class="dates"><b>Effective date:</b> September 21, 2026 &nbsp;&nbsp; <b>Last updated:</b> September 21, 2026</p>
+    </div>
+    <svg class="orbit" viewBox="0 0 280 280" role="img" aria-label="A comet orbiting a planet">
+      <defs>
+        <radialGradient id="pl" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#B9C8FF"/><stop offset=".6" stop-color="#6C8CFF"/><stop offset="1" stop-color="#3A3F9E"/></radialGradient>
+        <radialGradient id="glow"><stop offset="0" stop-color="#6C8CFF" stop-opacity=".45"/><stop offset="1" stop-color="#6C8CFF" stop-opacity="0"/></radialGradient>
+        <linearGradient id="tail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF6F91" stop-opacity="0"/><stop offset="1" stop-color="#FFB547"/></linearGradient>
+      </defs>
+      <circle cx="140" cy="140" r="110" fill="url(#glow)"/>
+      <circle cx="140" cy="140" r="96" fill="none" stroke="#2A2D5A" stroke-width="1.5" stroke-dasharray="3 7"/>
+      <circle cx="140" cy="140" r="44" fill="url(#pl)"/>
+      <g class="spin">
+        <path d="M78.3 66.5 A96 96 0 0 1 140 44" fill="none" stroke="url(#tail)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="140" cy="44" r="8" fill="#FFE2A8"/>
+        <circle cx="140" cy="44" r="14" fill="#FFB547" opacity=".35"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="promise">
+      <h2>The short version</h2>
+      <ul>
+        <li><b>No account, no sign-in</b><span>Just open the game and play. We never ask for your name, email or phone number.</span></li>
+        <li><b>Your progress stays on your phone</b><span>Best score, deepest Ascension and settings are saved only on your device.</span></li>
+        <li><b>No personal data collected</b><span>We don't collect, sell or share personal information.</span></li>
+        <li><b>Plays offline</b><span>Comet doesn't need an internet connection to play.</span></li>
+      </ul>
+    </div>
+
+    <article>
+      <section id="about">
+        <h2>About this policy</h2>
+        <p>This Privacy Policy applies to Comet, a mobile game published on Google Play under the package name <strong>com.intergalactic.app</strong> ("we", "us", "our" refer to the developer of Comet). It explains what information the game handles and the choices you have.</p>
+      </section>
+
+      <section id="collect">
+        <h2>Information the game stores</h2>
+        <p>To keep your progress between sessions, Comet saves a small amount of game data locally on your device:</p>
+        <ul>
+          <li>Your best score and deepest Ascension reached</li>
+          <li>Game settings, such as sound, music and vibration preferences</li>
+          <li>Whether you've completed the first-run introduction</li>
+        </ul>
+        <p>This data never leaves your device. We cannot see it, and it is not linked to your identity.</p>
+        <p>We do not collect your name, email address, contacts, photos, location, microphone audio or any other personal information.</p>
+      </section>
+
+      <section id="permissions">
+        <h2>Device permissions</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">Permission</th><th scope="col">Why the game uses it</th></tr></thead>
+            <tbody>
+              <tr><td>Vibration</td><td>To give light haptic feedback when you release and catch the comet. You can turn this off in the game's settings.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Comet does not request access to your camera, microphone, contacts, location, files or phone calls.</p>
+      </section>
+
+      <!--
+        ====== OPTIONAL SECTIONS ======
+        Only uncomment a section if your released build actually includes it.
+        The policy must match your Google Play Data Safety form.
+
+      <section id="ads">
+        <h2>Advertising</h2>
+        <p>Comet shows ads through Google AdMob. To serve and measure ads, AdMob may collect your device's advertising ID, approximate location from your IP address, device information and ad interaction data. You can reset your advertising ID or opt out of personalised ads in your device settings under Google → Ads. Learn more in <a href="https://policies.google.com/technologies/ads" rel="noopener">Google's advertising policy</a>.</p>
+      </section>
+
+      <section id="analytics">
+        <h2>Analytics</h2>
+        <p>We use Firebase Analytics to understand how the game is played and to fix crashes. It collects anonymous usage data such as levels reached, session length, device model, operating system and an app instance ID. It does not collect your name or contact details. See <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase privacy information</a>.</p>
+      </section>
+
+      <section id="leaderboard">
+        <h2>Daily Comet leaderboard</h2>
+        <p>If you take part in the Daily Comet challenge, your score, the date and a display name you choose are sent to our leaderboard server and shown to other players. Don't use your real name as your display name if you'd prefer not to.</p>
+      </section>
+      -->
+
+      <section id="sharing">
+        <h2>Sharing and selling</h2>
+        <p>We do not sell, rent, trade or share personal information with anyone, because we don't collect it in the first place.</p>
+      </section>
+
+      <section id="deletion">
+        <h2>Deleting your data</h2>
+        <p>All game data is stored on your device. You can delete it at any time by clearing Comet's app data in your device settings or by uninstalling the game. Once removed, it cannot be recovered.</p>
+      </section>
+
+      <section id="children">
+        <h2>Children</h2>
+        <p>Comet is suitable for a general audience. Because the game does not collect personal information from anyone, it does not knowingly collect personal information from children under 13. If you believe a child has somehow sent us personal information, please contact us and we will delete it.</p>
+      </section>
+
+      <section id="rights">
+        <h2>Your rights</h2>
+        <p>Depending on where you live, including the European Union and the United Kingdom, you may have rights to access, correct or delete personal data we hold about you. Since Comet does not collect personal data on our servers, there is usually nothing for us to provide, but you are always welcome to contact us with any question.</p>
+      </section>
+
+      <section id="changes">
+        <h2>Changes to this policy</h2>
+        <p>If we add features that change how the game handles data, we will update this page and the "Last updated" date above before those features are released.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact us</h2>
+        <p>Questions about this Privacy Policy? Reach us here:</p>
+        <div class="contact">
+          <p>Email: <a href="mailto:amangeldiyevabdullah@gmail.com">amangeldiyevabdullah@gmail.com</a></p>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Comet</span>
+    <span>Comet · com.intergalactic.app</span>
+  </div>
+</footer>
+
+</body>
+</html>
